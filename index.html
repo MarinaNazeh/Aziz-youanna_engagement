@@ -171,15 +171,24 @@
     /* Letter inside */
     .env-letter {
       position: absolute;
-      bottom: 10px; left: 20px; right: 20px;
+      bottom: 10px;
+      left: 20px;
+      right: 20px;
       height: 180px;
       background: #faf7f2;
       border-radius: 3px;
       box-shadow: 0 -4px 20px rgba(0,0,0,.15);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-script);
-      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
       color: var(--gold);
+    
       transform: translateY(0);
       transition: transform 1.2s cubic-bezier(.25,.46,.45,.94) .4s;
       z-index: 1;
@@ -262,6 +271,20 @@
         transparent 70%
       ),
         var(--bg);
+    }
+    .hero-entry-note {
+      margin-top: 1rem;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      background: rgba(15, 76, 100, 0.08);
+      border: 1px solid rgba(15, 76, 100, 0.15);
+      color: var(--text);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-weight: 500;
     }
 
     .hero-eyebrow {
@@ -827,6 +850,9 @@
 <div class="hero-venue" id="hero-venue"></div>
 
 <div class="hero-address" id="hero-address"></div>
+<div class="hero-entry-note">
+  🎟️ Entry is already paid and includes one meal &amp; a drink.
+</div>
       </div>
 
       <div class="save-date-wrap reveal">
