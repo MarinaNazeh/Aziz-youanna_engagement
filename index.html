@@ -94,7 +94,7 @@
       font-size: .75rem;
       letter-spacing: .28em;
       text-transform: uppercase;
-      color: rgba(234,223,207,.6);
+      color: rgb(18, 69, 124);
       margin-top: 1.2rem;
       animation: fadeFloat 2.4s ease forwards;
     }
@@ -130,7 +130,7 @@
     /* Envelope body */
     .env-body {
       position: absolute; inset: 0;
-      background: linear-gradient(160deg, #e8d9b5 0%, #d4bb85 100%);
+      background: linear-gradient(160deg, #2B6A82 0%, #0F4C64 100%);
       border-radius: 4px 4px 10px 10px;
       box-shadow: 0 20px 80px rgba(0,0,0,.5);
       overflow: hidden;
@@ -141,15 +141,15 @@
       position: absolute; bottom: 0; left: 0; right: 0;
       border-left:  160px solid transparent;
       border-right: 160px solid transparent;
-      border-bottom: 120px solid #c9a85c;
-    }
+      border-bottom: 120px solid #0B3C50;
+        }
     /* side triangles */
     .env-body::after {
       content: '';
       position: absolute; inset: 0;
       background:
-        linear-gradient(135deg, #c9a85c 50%, transparent 50%),
-        linear-gradient(225deg, #c9a85c 50%, transparent 50%);
+      linear-gradient(135deg, #0B3C50 50%, transparent 50%),
+      linear-gradient(225deg, #0B3C50 50%, transparent 50%);
       background-size: 50% 100%;
       background-position: left, right;
       background-repeat: no-repeat;
@@ -159,7 +159,7 @@
     /* Flap */
     .env-flap {
       position: absolute; top: 0; left: 0; right: 0; height: 115px;
-      background: linear-gradient(160deg, #dfc58a 0%, #c8a96a 100%);
+      background: linear-gradient(160deg, #3E7F99 0%, #0F4C64 100%);
       clip-path: polygon(0 0, 100% 0, 50% 100%);
       transform-origin: top center;
       transform: rotateX(0deg);
@@ -279,6 +279,12 @@
       line-height: 1;
       margin-bottom: .6rem;
     }
+    .hero-address {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: .35rem;
+    }
     .hero-together {
       font-family: var(--font-display);
       font-size: clamp(.85rem, 2vw, 1rem);
@@ -318,12 +324,14 @@
       color: var(--text-muted);
       line-height: 2.2;
     }
-    .hero-date {
-      font-family: var(--font-display);
-      font-size: clamp(1.1rem, 3vw, 1.6rem);
+    .hero-details {
+      font-family: var(--font-body);
+      font-size: 1rem;
       font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
       color: var(--text);
-      letter-spacing: .05em;
+      line-height: 1.8;
     }
     .hero-venue {
       font-family: var(--font-display);
@@ -765,8 +773,8 @@
   <div id="loading-screen" role="dialog" aria-modal="true" aria-label="Loading screen">
     <canvas id="loading-canvas"></canvas>
     <div class="loading-content">
-      <div class="loading-title">Our Story Begins</div>
-      <div class="loading-sub">Tap anywhere to open</div>
+      <div class="loading-title">Our special day is almost here! 💍</div>  
+      <div class="loading-sub">Tap anywhere to open to find all the event details</div>
     </div>
   </div>
 
@@ -811,10 +819,14 @@
 
       <div class="reveal" style="margin-top:1.8rem;">
         <div class="hero-details">Sunday</div>
-        <div class="hero-date" id="hero-date"></div>
-        <div class="hero-details" id="hero-time"></div>
-        <div class="hero-venue" id="hero-venue" style="margin-top:.6rem;"></div>
-        <div class="hero-details" id="hero-address" style="margin-top:.2rem;"></div>
+
+<div class="hero-date" id="hero-date"></div>
+
+<div class="hero-details" id="hero-time"></div>
+
+<div class="hero-venue" id="hero-venue"></div>
+
+<div class="hero-address" id="hero-address"></div>
       </div>
 
       <div class="save-date-wrap reveal">
@@ -866,7 +878,7 @@
     <section id="quote" aria-label="Love quote">
       <div class="divider"></div>
       <blockquote class="quote-text reveal">
-        "Two are better than one, because they have a good return for their labor: If either of them falls down, one can help the other up." Ecclesiastes 4:9-10 
+        "And I will give them one heart and one way,".(Jeremiah 32:39)"
       </blockquote>
       <div class="quote-attr reveal" id="quote-names"></div>
       <div class="divider"></div>
